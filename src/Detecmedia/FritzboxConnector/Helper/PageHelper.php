@@ -12,20 +12,38 @@ class PageHelper
     public function getPages($html): array
     {
         $matches = [];
-        $pattern = '/"(?<name>.*?)".*\{[^}]*"(.*)": "(?<lua>.*?).lua"[^}]*\}/';
+        $pattern = '/"(?<name>.*?)".*\{[^}]*": "(?<lua>.*?.lua)"[^}]*\}/';
         preg_match_all($pattern, $html, $matches);
 
         return $this->convert($matches);
     }
 
-    private function convert($matches)
+    /**
+     * @param $matches
+     * @return array
+     */
+    private function convert($matches): array
     {
         $convert = [];
         $iMax = count($matches['name']);
         for ($i = 0; $i < $iMax; $i++) {
-            $convert[$matches['name'][$i]] = $matches['lua'][$i];
+            $convert[$matches['name'][$i]] = str_replace(
+                '\/',
+                '/',
+                $matches[2][$i]
+            );
         }
 
         return $convert;
     }
+
+    public function getVars($html): array
+    {
+        $matches = [];
+        $pattern = '/"(?<name>.*?)":\s"(?<value>.*?)"/';
+        preg_match_all($pattern, $html, $matches);
+
+        return $this->convert($matches);
+    }
+
 }

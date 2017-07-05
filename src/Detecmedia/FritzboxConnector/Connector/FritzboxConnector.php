@@ -2,12 +2,12 @@
 
 namespace Detecmedia\FritzboxConnector\Connector;
 
+use Detecmedia\FritzboxConnector\Pages;
+use Detecmedia\FritzboxConnector\Request\RequestInteface as FritzboxRequestInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Cookie\CookieJar;
-use GuzzleHttp\Cookie\FileCookieJar;
 use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Psr7\Request;
 use RuntimeException;
 
 /**
@@ -23,49 +23,42 @@ class FritzboxConnector
     private $client;
 
     /**
-     * @var string
+     * @var string session id
      */
-    private $resp;
+    private $sid;
+
+    private $html;
+
+    /**
+     * @var Pages
+     */
+    private $pages;
 
     /**
      * FritzboxConnector constructor.
-     * @param ClientInterface $client
+     * @param Client|ClientInterface $client
+     * @param Pages $pages
      */
-    public function __construct(Client $client)
+    public function __construct(Client $client, Pages $pages)
     {
         $this->client = $client;
+        $this->pages = $pages;
     }
 
     /**
      * login in fritzbox
+     * @param string $user
+     * @param string $password
+     * @return bool
      * @throws RuntimeException
-     * @throws GuzzleException
      */
     public function login(string $user, string $password): bool
     {
         $cookie_path = sys_get_temp_dir() . "/gazeta.cookie";
         $cookie_jar = new CookieJar();
-        $params = [
-            // 'cookies' => $cookie_jar,
-            'headers' => [
-                'Accept-Language' => 'de-DE,ru;q=0.8,en-US;q=0.6,en;q=0.4',
-                'Host' => 'http://192.168.4.1',
-                'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                'Accept-Encoding' => 'gzip, deflate, sdch',
-                'Upgrade-Insecure-Requests' => 1,
-                'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) ' .
-                    'Chrome/53.0.2785.143 Safari/537.36',
-                'Referer' => 'http://192.168.4.1/',
-            ],
-            'allow_redirects' => false,
-            'http_errors' => true,
-            'connect_timeout' => 15,
-            'timeout' => 15,
-            'debug' => true,
-        ];
-        $responseBefore = $this->client->request('GET', 'http://192.168.4.1', $params);
+        $params = $this->getHeaders($this->client->getConfig('base_uri'));
+        $responseBefore = $this->client->request('GET', $this->client->getConfig('base_uri'), $params);
         $html = $responseBefore->getBody()->getContents();
-        //file_put_contents(__DIR__.'/test.html', $html);
         $challenge = $this->getChallenge($html);
         $uiResponse = $this->getUiResp($challenge, $password);
 
@@ -77,9 +70,11 @@ class FritzboxConnector
             ];
 
         $params ['form_params'] = $formParams;
-        $responseAfter = $this->client->request('POST', 'http://192.168.4.1', $params);
-        $html = $responseAfter->getBody()->getContents();
-        file_put_contents(__DIR__ . '/test.html', $html);
+        $responseAfter = $this->client->request('POST', $this->client->getConfig('base_uri'), $params);
+
+        $this->html = $responseAfter->getBody()->getContents();
+
+        $this->sid = $this->pages->getVar('sid', $this->html);
 
         return false;
     }
@@ -103,11 +98,12 @@ class FritzboxConnector
     }
 
     /**
-     * @param $html
-     * @param $password
+     * @param string $challenge
+     * @param string $password
      * @return string
+     * @internal param $html
      */
-    private function getUiResp($challenge, $password): string
+    private function getUiResp(string $challenge, string $password): string
     {
         $dotPass = $this->makeDots($password);
         $resp = $challenge . '-' . $dotPass;
@@ -123,5 +119,53 @@ class FritzboxConnector
         preg_match($pattern, $html, $matches);
 
         return $matches['value'];
+    }
+
+    /**
+     * @inheritdoc
+     * @throws GuzzleException
+     */
+    final public function send(FritzboxRequestInterface $request, $const)
+    {
+        $params = $this->getHeaders($this->client->getConfig('base_uri'));
+
+        if ('POST' === $request->getMethod()) {
+            $params ['form_params'] = $request->getPostVars($this->sid, $const, $this->html);
+        }
+
+        $client = $this->client;
+        $response = $client->request(
+            $request->getMethod(),
+            $client->getConfig('base_uri') . '/' . $request->getUrl(),
+            $params
+        );
+
+        return $response;
+    }
+
+    /**
+     * Gets simulate browser headers.
+     * @return array
+     */
+    private function getHeaders($host): array
+    {
+        return [
+            // 'cookies' => $cookie_jar,
+            'headers' => [
+                'Accept-Language' => 'de-DE,ru;q=0.8,en-US;q=0.6,en;q=0.4',
+                'Host' => $host,
+                'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Encoding' => 'gzip, deflate, sdch',
+                'Upgrade-Insecure-Requests' => 1,
+                'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) ' .
+                    'Chrome/53.0.2785.143 Safari/537.36',
+                'Referer' => $host,
+            ],
+            'allow_redirects' => false,
+            'http_errors' => true,
+            'connect_timeout' => 15,
+            'timeout' => 15,
+            'debug' => true,
+        ];
     }
 }

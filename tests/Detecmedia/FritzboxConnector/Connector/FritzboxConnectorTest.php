@@ -37,7 +37,7 @@ class FritzboxConnectorTest extends TestCase
     public function testLogin(): void
     {
         $fixture = $this->fixture;
-        $fixture->login('test', '*test*!');
+        $fixture->login('testuser', '*test*!');
         self::assertTrue(false);
     }
 
