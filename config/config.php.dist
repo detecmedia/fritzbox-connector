@@ -1,0 +1,16 @@
+<?php
+/**
+ * Change file name to config.php
+ * Config use for integration tests
+ */
+/**
+ * Username of fritzbox.
+ * @var string $fritzboxUser
+ */
+$fritzboxUser = 'hello';
+
+/**
+ * Password of fritzbox
+ * @var string $fritzboxPassword
+ */
+$fritzboxPassword = 'world';
