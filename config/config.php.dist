@@ -14,3 +14,9 @@ $fritzboxUser = 'hello';
  * @var string $fritzboxPassword
  */
 $fritzboxPassword = 'world';
+
+/**
+* Url to box
+* @var string $firtboxUrl
+*/
+$fritzboxUrl = '192.168.0.1';

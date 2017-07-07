@@ -27,19 +27,9 @@ abstract class Request implements RequestInteface
     private $method;
 
     /**
-     * @var ClientInterface
-     */
-    private $client;
-
-    /**
      * @var Pages
      */
     private $pages;
-
-    /**
-     * @var PageHelper
-     */
-    private $pageHelper;
 
     private $url;
 
@@ -51,9 +41,8 @@ abstract class Request implements RequestInteface
      * @internal param PageHelper $pageHelper
      * @internal param Pages $pages
      */
-    public function __construct(ClientInterface $client, Pages $pages, $method = 'POST')
+    public function __construct(Pages $pages, $method = 'POST')
     {
-        $this->client = $client;
         $this->pages = $pages;
         $this->method = $method;
     }
@@ -61,19 +50,17 @@ abstract class Request implements RequestInteface
     /**
      * Gets Post vars
      * @param string $sid
+     * @param string $const
+     * @param string $html
      * @return array
      */
-    public function getPostVars(string $sid, $const, $html): array
+    public function getPostVars(string $sid, string $const, string $html): array
     {
         $this->url = $this->pages->getPage($const, $html);
 
         return [
             'xhr' => 1,
             'sid' => $sid,
-            'lang' => 'de',
-            'page' => $const,
-            'type' => 'all',
-            'no_sidrenew' => 'Name',
         ];
     }
 

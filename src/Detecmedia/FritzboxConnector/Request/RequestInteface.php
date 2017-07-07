@@ -12,7 +12,7 @@ interface RequestInteface
 
     public function getMethod();
 
-    public function getPostVars(string $sid, $const, $html);
+    public function getPostVars(string $sid, string $const, string $html);
 
     public function getUrl();
 }

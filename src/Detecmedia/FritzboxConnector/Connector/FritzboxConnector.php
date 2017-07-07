@@ -3,6 +3,7 @@
 namespace Detecmedia\FritzboxConnector\Connector;
 
 use Detecmedia\FritzboxConnector\Pages;
+use Detecmedia\FritzboxConnector\Request\Logout;
 use Detecmedia\FritzboxConnector\Request\RequestInteface as FritzboxRequestInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -27,6 +28,9 @@ class FritzboxConnector
      */
     private $sid;
 
+    /**
+     * @var
+     */
     private $html;
 
     /**
@@ -35,14 +39,21 @@ class FritzboxConnector
     private $pages;
 
     /**
+     * @var array
+     */
+    private $options;
+
+    /**
      * FritzboxConnector constructor.
      * @param Client|ClientInterface $client
      * @param Pages $pages
+     * @param array $options
      */
-    public function __construct(Client $client, Pages $pages)
+    public function __construct(Client $client, Pages $pages, array $options = [])
     {
         $this->client = $client;
         $this->pages = $pages;
+        $this->options = $options;
     }
 
     /**
@@ -56,7 +67,7 @@ class FritzboxConnector
     {
         $cookie_path = sys_get_temp_dir() . "/gazeta.cookie";
         $cookie_jar = new CookieJar();
-        $params = $this->getHeaders($this->client->getConfig('base_uri'));
+        $params = $this->getHeaders();
         $responseBefore = $this->client->request('GET', $this->client->getConfig('base_uri'), $params);
         $html = $responseBefore->getBody()->getContents();
         $challenge = $this->getChallenge($html);
@@ -76,7 +87,7 @@ class FritzboxConnector
 
         $this->sid = $this->pages->getVar('sid', $this->html);
 
-        return false;
+        return $this->sid !== '';
     }
 
     /**
@@ -127,7 +138,7 @@ class FritzboxConnector
      */
     final public function send(FritzboxRequestInterface $request, $const)
     {
-        $params = $this->getHeaders($this->client->getConfig('base_uri'));
+        $params = $this->getHeaders();
 
         if ('POST' === $request->getMethod()) {
             $params ['form_params'] = $request->getPostVars($this->sid, $const, $this->html);
@@ -144,11 +155,27 @@ class FritzboxConnector
     }
 
     /**
+     * Logout from box.
+     * @return bool
+     * @throws GuzzleException
+     */
+    public function logout(): bool
+    {
+        $response = $this->send(new Logout($this->pages), Pages::INDEX);
+
+        return $response->getReasonPhrase() === 'OK';
+    }
+
+    /**
      * Gets simulate browser headers.
      * @return array
      */
-    private function getHeaders($host): array
+    private function getHeaders(): array
     {
+        $host = $this->client->getConfig('base_uri');
+
+        $debug = $this->options['debug'] ?? false;
+
         return [
             // 'cookies' => $cookie_jar,
             'headers' => [
@@ -165,7 +192,7 @@ class FritzboxConnector
             'http_errors' => true,
             'connect_timeout' => 15,
             'timeout' => 15,
-            'debug' => true,
+            'debug' => $debug,
         ];
     }
 }

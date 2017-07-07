@@ -13,6 +13,7 @@ class Pages
 {
     const BOX_USER = 'boxuser_edit';
     const DEFAULT = 'overview';
+    const INDEX = 'index';
 
     private $pageHelper;
 
@@ -40,6 +41,8 @@ class Pages
     {
         $pages = $this->pageHelper->getPages($html);
         $pages['overview'] = 'data.lua';
+        $pages['index'] = 'index.lua';
+
 
         return $pages[$const];
     }
