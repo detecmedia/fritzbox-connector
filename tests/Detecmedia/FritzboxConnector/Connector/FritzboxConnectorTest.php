@@ -3,7 +3,11 @@
 namespace Tests\Detecmedia\FritzboxConnector\Connector;
 
 use Detecmedia\FritzboxConnector\Connector\FritzboxConnector;
+use Detecmedia\FritzboxConnector\Pages;
 use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
@@ -20,28 +24,76 @@ class FritzboxConnectorTest extends TestCase
     /**
      * init test
      */
-    protected function setUp(): void
+    protected function setUp()
     {
-        $clientMock = new Client();
-        $fixture = new FritzboxConnector($clientMock, 'http://192.168.4.1');
-        $this->fixture = $fixture;
+        $this->fixture = $this->getFritzboxConnectorMock();
     }
 
-
     /**
-     * @var
+     * @param array $mocks
+     * @return FritzboxConnector
      */
+    private function getFritzboxConnectorMock(array $mocks = []): FritzboxConnector
+    {
+        $pages = $this->createMock(Pages::class);
+
+        $mock = new MockHandler([
+            new Response(
+                200,
+                FritzboxConnector::getHeaders('http://example.com', true),
+                $this->getLoginPage()
+            ),
+        ]);
+
+        $handler = HandlerStack::create($mock);
+        $client = new Client(['base_uri' => 'http://example.com', 'handler' => $handler]);
+
+        foreach ($mocks as $key => $mock) {
+            ${$key} = $mock;
+        }
+
+        return new FritzboxConnector($client, $pages);
+    }
+
     /**
      * test fritzbox connector login.
      */
-    public function testLogin(): void
+    public function testLogin()
     {
-        $fixture = $this->fixture;
-        $fixture->login('testuser', '*test*!');
-        self::assertTrue(false);
+        $uiResponse = 'foo';
+        $user = 'test-user';
+        $parameters = FritzboxConnector::getHeaders('http://example.com', true);
+        $formParams =
+            [
+                'response' => $uiResponse,
+                'lp' => '',
+                'username' => $user,
+            ];
+
+        $parameters ['form_params'] = $formParams;
+
+        $mock = new MockHandler([
+            new Response(
+                200,
+                $parameters,
+                $this->getLoginPage()
+            ),
+        ]);
+
+        $handler = HandlerStack::create($mock);
+        $client = new Client(['base_uri' => 'http://example.com', 'handler' => $handler]);
+
+        $fixture = $this->getFritzboxConnectorMock(['client' => $client]);
+
+        $reflectionClass = new ReflectionClass($fixture);
+        $reflectionPropertyChallenge = $reflectionClass->getProperty('challenge');
+        $reflectionPropertyChallenge->setAccessible(true);
+        $reflectionPropertyChallenge->setValue($fixture, 'foo');
+
+        self::assertTrue($fixture->login('test-user', '*test*!'));
     }
 
-    public function testMakeDots(): void
+    public function testMakeDots()
     {
         $reflectionClass = new ReflectionClass($this->fixture);
         $makeDots = $reflectionClass->getMethod('makeDots');
@@ -59,7 +111,7 @@ class FritzboxConnectorTest extends TestCase
         $getChallenge = $reflectionClass->getMethod('getChallenge');
         $getChallenge->setAccessible(true);
 
-        $html = $this->getLoginPage();
+        $html = $this->getStartnPage();
         self::assertEquals(
             '108005d1',
             $getChallenge->invokeArgs($this->fixture, [$html])
@@ -67,6 +119,11 @@ class FritzboxConnectorTest extends TestCase
     }
 
     private function getLoginPage()
+    {
+        return file_get_contents(__DIR__ . '/../Fixtures/logedin-page.html');
+    }
+
+    private function getStartnPage()
     {
         return file_get_contents(__DIR__ . '/../Fixtures/login-page.html');
     }

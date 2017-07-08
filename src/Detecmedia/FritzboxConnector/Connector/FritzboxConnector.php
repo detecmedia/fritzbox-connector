@@ -43,17 +43,34 @@ class FritzboxConnector
      */
     private $options;
 
+    private $debug;
+
+    private $challenge;
+
     /**
      * FritzboxConnector constructor.
      * @param Client|ClientInterface $client
      * @param Pages $pages
      * @param array $options
      */
-    public function __construct(Client $client, Pages $pages, array $options = [])
+    public function __construct(ClientInterface $client, Pages $pages, array $options = [])
     {
         $this->client = $client;
         $this->pages = $pages;
         $this->options = $options;
+    }
+
+    public function connect()
+    {
+        $cookie_path = sys_get_temp_dir() . "/gazeta.cookie";
+        $cookie_jar = new CookieJar();
+        $params = self::getHeaders($this->client->getConfig('base_uri'), $this->options['debug'] ?? false);
+
+        $responseBefore = $this->client->request('GET', $this->client->getConfig('base_uri'), $params);
+        $html = $responseBefore->getBody()->getContents();
+        $this->challenge = $this->getChallenge($html);
+
+        return $this->challenge !== '';
     }
 
     /**
@@ -65,14 +82,9 @@ class FritzboxConnector
      */
     public function login(string $user, string $password): bool
     {
-        $cookie_path = sys_get_temp_dir() . "/gazeta.cookie";
-        $cookie_jar = new CookieJar();
-        $params = $this->getHeaders();
-        $responseBefore = $this->client->request('GET', $this->client->getConfig('base_uri'), $params);
-        $html = $responseBefore->getBody()->getContents();
-        $challenge = $this->getChallenge($html);
-        $uiResponse = $this->getUiResp($challenge, $password);
+        $params = self::getHeaders($this->client->getConfig('base_uri'), $this->options['debug'] ?? false);
 
+        $uiResponse = $this->getUiResp($this->challenge, $password);
         $formParams =
             [
                 'response' => $uiResponse,
@@ -123,7 +135,7 @@ class FritzboxConnector
         return $challenge . '-' . md5($resp);
     }
 
-    private function getChallenge(string $html)
+    private function getChallenge(string $html): string
     {
         $matches = [];
         $pattern = '/"challenge": "(?P<value>.*?)",/';
@@ -138,7 +150,7 @@ class FritzboxConnector
      */
     final public function send(FritzboxRequestInterface $request, $const)
     {
-        $params = $this->getHeaders();
+        $params = self::getHeaders($this->client->getConfig('base_uri'), $this->options['debug'] ?? false);
 
         if ('POST' === $request->getMethod()) {
             $params ['form_params'] = $request->getPostVars($this->sid, $const, $this->html);
@@ -168,14 +180,12 @@ class FritzboxConnector
 
     /**
      * Gets simulate browser headers.
+     * @param string $host
+     * @param bool $debug
      * @return array
      */
-    private function getHeaders(): array
+    static public function getHeaders(string $host, bool $debug): array
     {
-        $host = $this->client->getConfig('base_uri');
-
-        $debug = $this->options['debug'] ?? false;
-
         return [
             // 'cookies' => $cookie_jar,
             'headers' => [

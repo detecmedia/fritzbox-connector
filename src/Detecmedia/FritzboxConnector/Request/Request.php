@@ -2,12 +2,9 @@
 
 namespace Detecmedia\FritzboxConnector\Request;
 
-use Detecmedia\FritzboxConnector\Helper\PageHelper;
 use Detecmedia\FritzboxConnector\Pages;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
-use RuntimeException;
 
 /**
  * Class Request
@@ -86,14 +83,4 @@ abstract class Request implements RequestInteface
     {
         return $this->url;
     }
-
-    /**
-     * @inheritdoc
-     * @throws RuntimeException
-     */
-    public function getResponse(): string
-    {
-        return $this->response->getBody()->getContents();
-    }
-
 }

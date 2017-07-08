@@ -16,7 +16,7 @@ class PageHelperTest extends TestCase
      */
     private $fixture;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->fixture = new PageHelper();
     }
@@ -24,7 +24,7 @@ class PageHelperTest extends TestCase
     /**
      * Test get pages
      */
-    public function testGetPages(): void
+    public function testGetPages()
     {
         $fixture = $this->fixture;
         $html = $this->getHtmlFixture();
@@ -39,7 +39,7 @@ class PageHelperTest extends TestCase
     /**
      * Test get vars
      */
-    public function testGetVars(): void
+    public function testGetVars()
     {
         $fixture = $this->fixture;
         $html = $this->getHtmlFixture();

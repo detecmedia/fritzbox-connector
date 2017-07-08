@@ -14,7 +14,7 @@ class SessionHelperTest extends TestCase
     /**
      * Tests get session id
      */
-    public function testGetSession(): void
+    public function testGetSession()
     {
         $fixture = new SessionHelper();
         $html = file_get_contents(__DIR__ . '/../Fixtures/logedin-page.html');

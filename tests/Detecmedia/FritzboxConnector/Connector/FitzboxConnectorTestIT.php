@@ -1,4 +1,7 @@
 <?php
+
+namespace Tests\Detecmedia\FritzboxConnector\Connector;
+
 use Detecmedia\FritzboxConnector\Connector\FritzboxConnector;
 use Detecmedia\FritzboxConnector\Pages;
 use Detecmedia\FritzboxConnector\Request\Overview;
@@ -6,10 +9,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 
 /**
  * Class TestTest
- * @package ${NAMESPACE}
+ * @package Tests\Detecmedia\FritzboxConnector\Connector;
  * @version $id$
  */
 class FitzboxConnectorTestIT extends TestCase
@@ -20,13 +24,16 @@ class FitzboxConnectorTestIT extends TestCase
      * @throws RuntimeException
      * @throws AssertionFailedError
      */
-    public function test(): void
+    public function test()
     {
         global $fritzboxUrl, $fritzboxUser, $fritzboxPassword;
         $pages = new Pages();
 
         $clientMock = new Client(['base_uri' => $fritzboxUrl]);
         $fixture = new FritzboxConnector($clientMock, $pages, ['debug' => true]);
+        if (!$fixture->connect()) {
+            $this->fail('not connecting with box');
+        }
         if (!$fixture->login($fritzboxUser, $fritzboxPassword)) {
             $this->fail('not logged in in box');
         }
@@ -35,15 +42,7 @@ class FitzboxConnectorTestIT extends TestCase
         $response = $fixture->send($overview, Pages::DEFAULT);
 
         $jsonArray = json_decode($response->getBody()->getContents(), true);
-        $tmp = explode(' ', $jsonArray['data']['fritzos']['boxDate']);
-        $tmp[0] = substr($tmp[0], 0, strrpos($tmp[0], ':'));
-        date_default_timezone_set('Europe/Berlin');
-        $date = implode(' ', $tmp);
-        $currentTime = date('H:i d.m.Y');
-        self::assertEquals(
-            $currentTime,
-            $date
-        );
+        self::assertArrayHasKey('boxDate', $jsonArray['data']['fritzos']);
         self::assertTrue($fixture->logout());
     }
 }
