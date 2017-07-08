@@ -1,6 +1,7 @@
 {
   "name": "detecmedia/fritzbox-connector",
-  "type": "project",
+  "description": "A small Fritzbox (Cable) Web Connector for FRITZ!OS:06.50",
+  "type": "library",
   "autoload": {
     "psr-4": {
       "Detecmedia\\": "src/Detecmedia/",
@@ -8,6 +9,7 @@
     }
   },
   "require": {
+    "php": "^7.1",
     "guzzlehttp/guzzle": "^6.3"
   },
   "authors": [
@@ -16,9 +18,8 @@
       "email": "markus.potthast@detecmedia.de"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require-dev": {
-    "phpunit/phpunit": "^6.1",
-    "behat/mink-goutte-driver": "^1.2"
+    "phpunit/phpunit": "^6.1"
   }
 }
