@@ -1,5 +1,5 @@
 {
-  "name": "root/fritzbox-connector",
+  "name": "detecmedia/fritzbox-connector",
   "type": "project",
   "autoload": {
     "psr-4": {
