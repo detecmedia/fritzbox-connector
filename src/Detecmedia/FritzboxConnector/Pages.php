@@ -14,6 +14,7 @@ class Pages
     const BOX_USER = 'boxuser_edit';
     const DEFAULT = 'overview';
     const INDEX = 'index';
+    const HOMENET = 'homeNet';
 
     private $pageHelper;
 
@@ -37,11 +38,18 @@ class Pages
         return $this->vars[$const];
     }
 
+    /**
+     * Define page urls
+     * @param $const
+     * @param $html
+     * @return mixed
+     */
     public function getPage($const, $html)
     {
-        $pages = $this->pageHelper->getPages($html);
+        //$pages = $this->pageHelper->getPages($html);
         $pages['overview'] = 'data.lua';
         $pages['index'] = 'index.lua';
+        $pages['homeNet'] = 'data.lua';
 
 
         return $pages[$const];

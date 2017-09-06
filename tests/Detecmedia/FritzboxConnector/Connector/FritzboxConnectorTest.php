@@ -35,7 +35,7 @@ class FritzboxConnectorTest extends TestCase
      */
     private function getFritzboxConnectorMock(array $mocks = []): FritzboxConnector
     {
-        $pages = $this->createMock(Pages::class);
+        $pages = $this->createObj(Pages::class);
 
         $mock = new MockHandler([
             new Response(

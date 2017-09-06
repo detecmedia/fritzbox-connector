@@ -15,7 +15,7 @@ class LogoutTest extends TestCase
 
     public function testGetPostVars()
     {
-        $pagesMock = $this->createMock(Pages::class);
+        $pagesMock = $this->createObj(Pages::class);
         $fixtures = new Logout($pagesMock);
         self::assertEquals(
             [

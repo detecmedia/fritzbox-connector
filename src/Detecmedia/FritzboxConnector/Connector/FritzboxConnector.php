@@ -9,6 +9,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Exception\GuzzleException;
+use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
 
 /**
@@ -147,6 +148,7 @@ class FritzboxConnector
     /**
      * @inheritdoc
      * @throws GuzzleException
+     * @return ResponseInterface
      */
     final public function send(FritzboxRequestInterface $request, $const)
     {
@@ -201,7 +203,7 @@ class FritzboxConnector
             'allow_redirects' => false,
             'http_errors' => true,
             'connect_timeout' => 15,
-            'timeout' => 15,
+            'timeout' => 60,
             'debug' => $debug,
         ];
     }
