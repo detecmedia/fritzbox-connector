@@ -22,7 +22,7 @@ class RequestTest extends TestCase
      */
     protected function setUp()
     {
-        $pages = $this->createMock(Pages::class);
+        $pages = $this->createObj(Pages::class);
         $pages->method('getPage')
             ->with(PAGES::INDEX, 'foobar')
             ->willReturn('index.lua');
