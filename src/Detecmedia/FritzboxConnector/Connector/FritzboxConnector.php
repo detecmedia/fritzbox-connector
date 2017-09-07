@@ -4,7 +4,7 @@ namespace Detecmedia\FritzboxConnector\Connector;
 
 use Detecmedia\FritzboxConnector\Pages;
 use Detecmedia\FritzboxConnector\Request\Logout;
-use Detecmedia\FritzboxConnector\Request\RequestInteface as FritzboxRequestInterface;
+use Detecmedia\FritzboxConnector\Request\RequestInterface as FritzboxRequestInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Cookie\CookieJar;

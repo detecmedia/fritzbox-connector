@@ -10,35 +10,59 @@ namespace Detecmedia\FritzboxConnector\Helper;
 
 
 use Detecmedia\FritzboxConnector\Model\Client;
+use Detecmedia\FritzboxConnector\Model\ClientDetails;
 use DOMDocument;
 use DOMElement;
 
 class NetworkListHelper
 {
-    /** @var Client[] $clients */
+    /** @var Client[]|ClientDetails[] $clients */
     private $clients = [];
 
-    /** @var  string $html */
-    private $html;
+    /** @var  string $content */
+    private $content;
 
     /**
      * NetworkListHelper constructor.
-     * @param $html
+     * @param $content
      */
-    public function __construct($html)
+    public function __construct($content)
     {
-        $this->html = $html;
+        $this->content = $content;
     }
 
     /**
-     * @param string $html
-     * @return Client[]
+     * @return ClientDetails[]|Client[]
      */
     public function getClientList(): array
     {
+
+        if (!$this->isJson($this->content)) {
+            $this->clients = $this->getClientListFromHtml($this->content);
+        } else {
+            $this->clients = $this->getClientListFormJson($this->content);
+        }
+
+        return $this->clients;
+    }
+
+    private function getClientListFormJson($json)
+    {
+        $clients = [];
+
+        $jsonArray = json_decode($json,true);
+        foreach($jsonArray['data']['active'] as $client) {
+            $clients[] = new ClientDetails($client);
+        }
+
+        return $clients;
+    }
+
+    private function getClientListFromHtml(string $content)
+    {
         $clients = [];
         $dom = new DOMDocument();
-        $dom->loadHTML($this->html);
+        $dom->loadHTML($content);
         $trNotes = $dom->getElementsByTagName('tr');
 
         /** @var DOMElement $trNote */
@@ -58,7 +82,7 @@ class NetworkListHelper
                             $href = $aNote->getAttribute('href');
                             $get_string = parse_url($href, PHP_URL_QUERY);
                             parse_str($get_string, $get_array);
-                            $client->setLink($get_array['lnk']);
+                            $client->setUrl($get_array['lnk']);
                         }
                     }
                 }
@@ -70,7 +94,7 @@ class NetworkListHelper
                             $get_string = parse_url($href, PHP_URL_QUERY);
                             parse_str($get_string, $get_array);
                             if (array_key_exists('dev', $get_array)) {
-                                $client->setDevice($get_array['dev']);
+                                $client->setUid($get_array['dev']);
                             }
                         }
                     }
@@ -78,7 +102,6 @@ class NetworkListHelper
             }
 
         }
-        $this->clients = $clients;
         return $clients;
     }
 
@@ -89,11 +112,17 @@ class NetworkListHelper
         }
         $clientByDevice = null;
         foreach ($this->clients as $client) {
-            if ($client->getDevice() === $deviceName) {
+            if ($client->getUid() === $deviceName) {
                 $clientByDevice = $client;
                 break;
             }
         }
         return $clientByDevice;
+    }
+
+    private function isJson($string)
+    {
+        json_decode($string);
+        return (json_last_error() == JSON_ERROR_NONE);
     }
 }
