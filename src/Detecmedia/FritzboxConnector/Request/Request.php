@@ -11,7 +11,7 @@ use Psr\Http\Message\ResponseInterface;
  * @package Detecmedia\FritzboxConnector\Request
  * @version $id$
  */
-abstract class Request implements RequestInteface
+abstract class Request implements RequestInterface
 {
     /**
      * @var ResponseInterface
@@ -28,7 +28,11 @@ abstract class Request implements RequestInteface
      */
     private $pages;
 
-    private $url;
+    /**
+     * default fritzbox data url
+     * @var string $url
+     */
+    private $url = 'data.lua';
 
     /**
      * Request constructor.

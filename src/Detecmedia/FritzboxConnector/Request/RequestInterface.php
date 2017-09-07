@@ -2,7 +2,7 @@
 
 namespace Detecmedia\FritzboxConnector\Request;
 
-interface RequestInteface
+interface RequestInterface
 {
     public function getMethod();
 
