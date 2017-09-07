@@ -1,0 +1,2057 @@
+{
+"data": {
+  "fbox": [{
+      "mac": "34:31:C4:6E:0C:00",
+      "ipv6": "", 
+      "conn_info": {
+        "linktext": "Kabel ", 
+        "down": "450.6 Mbit\/s", 
+        "up": "20 Mbit\/s"
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": ["WLAN 2,4 \/ 5 GHz"], 
+      "options": {
+        "guest": false, 
+        "deleteable": false, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "UID": "landevice2742", 
+      "state": "led_green", 
+      "port": "", 
+      "name": "fritz.box", 
+      "summarypropertie": "WLAN 2,4 \/ 5 GHz", 
+      "classes": "docsis", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.1",
+      "type": "unknown", 
+      "ipv4": "192.168.0.1"
+    }, {
+      "mac": "34:31:C4:6E:0C:00",
+      "ipv6": "", 
+      "conn_info": {
+        "linktext": "Kabel ", 
+        "down": "450.6 Mbit\/s", 
+        "up": "20 Mbit\/s"
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": ["WLAN 2,4 \/ 5 GHz"], 
+      "options": {
+        "guest": false, 
+        "deleteable": false, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "UID": "landevice2710", 
+      "state": "led_green", 
+      "port": "", 
+      "name": "fritz.nas", 
+      "summarypropertie": "WLAN 2,4 \/ 5 GHz", 
+      "classes": "docsis", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.254",
+      "type": "unknown", 
+      "ipv4": "192.168.0.254"
+    }], 
+  "titledeviceadd": "Sie können Netzwerkgeräte hinzufügen, denen eine feste IP-Adresse zugewiesen werden soll und die bisher noch keinen Kontakt zur FRITZ!Box hatten.", 
+  "active": [{
+      "mac": "B8:27:EB:01:01:01",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "100", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "onclick": "port_fw", 
+          "txt": "Portfreigabe", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2734", 
+      "state": "globe_online", 
+      "port": "LAN 1 mit 100 Mbit\/s ", 
+      "name": "pc1",
+      "summarypropertie": "Portfreigabe", 
+      "classes": "ethernet", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.7",
+      "type": "ethernet", 
+      "ipv4": "192.168.0.7"
+    }, {
+      "mac": "00:BB:C1:01:01:02",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "72", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 72 \/ 33 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2711", 
+      "state": "led_green", 
+      "port": "WLAN", 
+      "name": "26F98E000000", 
+      "summarypropertie": "2,4 GHz, 72 \/ 33 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.104",
+      "type": "wlan", 
+      "ipv4": "192.168.0.104"
+    }, {
+      "mac": "54:27:AE:08:0A:02",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "325", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "5 GHz, 325 \/ 325 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2724", 
+      "state": "globe_online", 
+      "port": "WLAN", 
+      "name": "Laptop1",
+      "summarypropertie": "5 GHz, 325 \/ 325 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.65"
+    }, {
+      "mac": "F8:D1:47:11:45:01",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "64", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 64 \/ 65 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2715", 
+      "state": "led_green", 
+      "port": "WLAN", 
+      "name": "repeater2", 
+      "summarypropertie": "2,4 GHz, 64 \/ 65 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.25"
+    }, {
+      "mac": "80:01:02:F0:61:04",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "repeater3-5G", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2708", 
+      "state": "led_green", 
+      "port": "WLAN", 
+      "name": "repeater3", 
+      "summarypropertie": "2,4 GHz", 
+      "classes": "wlan", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.73", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.73"
+    }, {
+      "mac": "80:1A:02:00:61:19",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "5 GHz", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2707", 
+      "state": "led_green", 
+      "port": "WLAN", 
+      "name": "repeater3-5G", 
+      "summarypropertie": "5 GHz", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.95"
+    }, {
+      "mac": "00:08:21:A4:0F:01",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "53", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 53 \/ 17 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2731", 
+      "state": "globe_online", 
+      "port": "WLAN", 
+      "name": "Jlinksz-K107-nischengeschaeft-gmail-com", 
+      "summarypropertie": "2,4 GHz, 53 \/ 17 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.107"
+    }, {
+      "mac": "18:5E:0F:AF:5A:09",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "72", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 72 \/ 102 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2721", 
+      "state": "globe_online", 
+      "port": "WLAN", 
+      "name": "hqnb07", 
+      "summarypropertie": "2,4 GHz, 72 \/ 102 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.118", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.118"
+    }, {
+      "mac": "C0:F0:1A:00:E9:50",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "144", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 144 \/ 69 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2706", 
+      "state": "globe_online", 
+      "port": "WLAN", 
+      "name": "iPhonevnYasmina", 
+      "summarypropertie": "2,4 GHz, 144 \/ 69 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.103"
+    }, {
+      "mac": "30:07:4D:00:30:01",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "142", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 142 \/ 34 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2720", 
+      "state": "globe_online", 
+      "port": "WLAN", 
+      "name": "Galaxy-S8", 
+      "summarypropertie": "2,4 GHz, 142 \/ 34 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.64"
+    }, {
+      "mac": "00:25:B3:00:C1:75",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "53", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 53 \/ 54 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2733", 
+      "state": "led_green", 
+      "port": "WLAN", 
+      "name": "HP", 
+      "summarypropertie": "2,4 GHz, 53 \/ 54 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "\/secure_link.lua?sid=3b46076e20e9943a&lnk=http%3A%2F%2F192.168.0.78", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.78"
+    }, {
+      "mac": "BC:54:36:23:0F:30",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "72", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": true
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": [{
+          "txt": "2,4 GHz, 72 \/ 29 Mbit\/s", 
+          "onclick": "", 
+          "icon": "", 
+          "link": ""
+        }], 
+      "UID": "landevice2729", 
+      "state": "globe_online", 
+      "port": "WLAN", 
+      "name": "Yassins-iPhone", 
+      "summarypropertie": "2,4 GHz, 72 \/ 29 Mbit\/s", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.81"
+    }], 
+  "opmode": "opmode_standard", 
+  "timestamp": 3027, 
+  "devices": {
+  }, 
+  "titledevicedel": "Sie können alle Netzwerkgeräte aus der Übersicht entfernen, für die in der FRITZ!Box keine individuelle Einstellung vorgenommen wurde und die aktuell nicht mit der FRITZ!Box verbunden sind.", 
+  "passive": [{
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2714", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "android-e71b0e2ed146b6eb", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.136"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2713", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "aprilliebe-PC", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.119"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2717", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "ArgumentOutOfRangeException", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.58"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2718", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "Besitzer-PC", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.50"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "repeater3-5G", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2735", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "CUBOT-X16-nischengeschaeft-gmail-com", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.68"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2709", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "DESKTOP-0PF9K5J", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.51"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2728", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "iPhonevPotthast", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.111"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2719", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "localhost", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.52"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2730", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "localhost", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.79"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2740", 
+      "state": "", 
+      "port": "VPN", 
+      "name": "manuela", 
+      "summarypropertie": "", 
+      "classes": "vpn", 
+      "url": "", 
+      "type": "vpn", 
+      "ipv4": "192.168.0.204"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2723", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "Manuelas-iPad", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.95"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2741", 
+      "state": "", 
+      "port": "VPN", 
+      "name": "markus", 
+      "summarypropertie": "", 
+      "classes": "vpn", 
+      "url": "", 
+      "type": "vpn", 
+      "ipv4": "192.168.0.201"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2712", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "MarkussHandy", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.30"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2725", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "MeinMacBook-2", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.83"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2727", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "mpt", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.20"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2739", 
+      "state": "", 
+      "port": "VPN", 
+      "name": "mpt", 
+      "summarypropertie": "", 
+      "classes": "vpn", 
+      "url": "", 
+      "type": "vpn", 
+      "ipv4": "192.168.0.202"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2738", 
+      "state": "", 
+      "port": "VPN", 
+      "name": "MyFRITZ!App 2 (CUBOT X16, nischengeschaeft@gmail.com)", 
+      "summarypropertie": "", 
+      "classes": "vpn", 
+      "url": "", 
+      "type": "vpn", 
+      "ipv4": "192.168.0.203"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2737", 
+      "state": "", 
+      "port": "VPN", 
+      "name": "MyFRITZ!App 2 (Jlinksz K107, nischengeschaeft@gmail.com)", 
+      "summarypropertie": "", 
+      "classes": "vpn", 
+      "url": "", 
+      "type": "vpn", 
+      "ipv4": "192.168.0.205"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2736", 
+      "state": "", 
+      "port": "VPN", 
+      "name": "MyFRITZ!App 2 (Samsung SM-G950F, Markus Potthast)", 
+      "summarypropertie": "", 
+      "classes": "vpn", 
+      "url": "", 
+      "type": "vpn", 
+      "ipv4": "192.168.0.206"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2751", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-00-1A-E9-AC-12-CB", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2755", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-00-88-65-9B-C1-A2", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2771", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-04-0C-CE-C9-E5-55", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2748", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-10-40-F3-ED-97-C0", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2753", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-10-AE-60-B0-92-2B", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2750", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-18-0C-AC-29-8B-37", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2726", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-192-168-4-113", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.113"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2778", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-23", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.23"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2772", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-24", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.24"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2768", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-28", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.28"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2777", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-37", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.37"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2766", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-45", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.45"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2774", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-53", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.53"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2770", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-71", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.71"
+    }, {
+      "mac": "", 
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2776", 
+      "state": "", 
+      "port": "", 
+      "name": "PC-192-168-4-82", 
+      "summarypropertie": "", 
+      "classes": "ipuser", 
+      "url": "", 
+      "type": "ipuser", 
+      "ipv4": "192.168.0.82"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2769", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-28-CF-DA-3B-DA-39", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2767", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-28-CF-DA-48-B7-DF", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2757", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-28-CF-E9-E7-57-7C", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2746", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-2C-D0-5A-E1-DE-C2", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2775", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-34-DE-1A-0B-49-92", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2743", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-54-88-0E-47-21-DA", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2747", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-5C-0A-5B-8F-D7-60", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2758", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-60-F4-45-A2-3F-24", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2773", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-60-FE-1E-85-78-26", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2745", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-68-09-27-7E-1E-A6", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2744", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-68-A8-6D-46-D4-90", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2761", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-74-DA-38-02-56-62", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2756", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-7C-0B-C6-56-DB-9A", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2765", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-84-8E-DF-E8-F7-7C", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2762", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-A0-CB-FD-C8-A1-70", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2752", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-AC-7B-A1-45-B3-CA", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2754", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-AC-E0-10-1A-A8-47", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2749", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-B8-98-F7-E8-DB-DD", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2763", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-EC-1A-59-52-93-7B", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2764", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-EC-9B-F3-DF-0F-52", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2759", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-F0-4F-7C-2C-B4-BF", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2760", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "PC-F4-09-D8-AB-5A-EC", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": ""
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2716", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "Tablet", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.84"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2732", 
+      "state": "", 
+      "port": "WLAN", 
+      "name": "Windows-Phone", 
+      "summarypropertie": "", 
+      "classes": "wlan", 
+      "url": "", 
+      "type": "wlan", 
+      "ipv4": "192.168.0.123"
+    }, {
+      "mac": "00:00:00:00:00:00",
+      "ipv6": "", 
+      "options": {
+        "guest": false, 
+        "deleteable": true, 
+        "up": "0", 
+        "alert": "", 
+        "editable": true, 
+        "down": "", 
+        "disable": false
+      }, 
+      "parent": {
+        "name": "repeater2", 
+        "url": ""
+      }, 
+      "properties": {
+      }, 
+      "UID": "landevice2722", 
+      "state": "", 
+      "port": "", 
+      "name": "Yassin-PC", 
+      "summarypropertie": "", 
+      "classes": "unknown", 
+      "url": "", 
+      "type": "unknown", 
+      "ipv4": "192.168.0.102"
+    }], 
+  "fbox_count": 2, 
+  "ispowerline": false, 
+  "gateway": "62.143.16.1", 
+  "passive_count": 59, 
+  "count": 73, 
+  "active_count": 12
+}, 
+"hide": {
+  "rss": true, 
+  "mobile": true, 
+  "shareUsb": true, 
+  "dectMail": true, 
+  "ipv6fw": true, 
+  "ssoSet": true, 
+  "liveImg": true
+}, 
+"pid": "netDev", 
+"sid": "3b46076e20e9943a"
+}

@@ -3,9 +3,9 @@ namespace Detecmedia\FritzboxConnector\Model;
 
 class Client
 {
-    private $name;
-    private $link;
-    private $device;
+    protected $name;
+    protected $url;
+    protected $uid;
 
     /**
      * @return mixed
@@ -26,39 +26,39 @@ class Client
     }
 
     /**
-     * @param mixed $link
+     * @param mixed $url
      * @return Client
      */
-    public function setLink($link)
+    public function setUrl($url)
     {
-        $this->link = $link;
+        $this->url = $url;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getLink()
+    public function getUrl()
     {
-        return $this->link;
+        return $this->url;
     }
 
     /**
-     * @param mixed $device
+     * @param mixed $uid
      * @return Client
      */
-    public function setDevice($device)
+    public function setUid($uid)
     {
-        $this->device = $device;
+        $this->uid = $uid;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getDevice()
+    public function getUid()
     {
-        return $this->device;
+        return $this->uid;
     }
 
 

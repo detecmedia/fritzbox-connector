@@ -15,6 +15,7 @@ class Pages
     const DEFAULT = 'overview';
     const INDEX = 'index';
     const HOMENET = 'homeNet';
+    const NETDEV = 'netDev';
 
     private $pageHelper;
 
@@ -50,7 +51,7 @@ class Pages
         $pages['overview'] = 'data.lua';
         $pages['index'] = 'index.lua';
         $pages['homeNet'] = 'data.lua';
-
+        $pages['netDev'] = 'data.lua';
 
         return $pages[$const];
     }
