@@ -2,6 +2,15 @@
 Connect with Fritzbox FRITZ!OS:06.50
 
 ```php
+<?php
+require 'bootstrap.php';
+require 'vendor/autoload.php';
+require 'src/Detecmedia/FritzboxConnector/Pages.php';
+
+use Detecmedia\FritzboxConnector\Pages;
+use Detecmedia\FritzboxConnector\Connector\FritzboxConnector;
+use GuzzleHttp\Client;
+
 $pages = new Pages();
 
 $clientMock = new Client(['base_uri' => $fritzboxUrl]);
