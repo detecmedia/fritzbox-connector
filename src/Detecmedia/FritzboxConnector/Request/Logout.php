@@ -9,6 +9,12 @@ namespace Detecmedia\FritzboxConnector\Request;
  */
 class Logout extends Request
 {
+    /**
+     * @param string $sid
+     * @param string $const
+     * @param string $html
+     * @return array
+     */
     public function getPostVars(string $sid, string $const, string $html): array
     {
         $data = parent::getPostVars($sid, $const, $html);

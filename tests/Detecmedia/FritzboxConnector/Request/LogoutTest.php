@@ -26,4 +26,11 @@ class LogoutTest extends TestCase
             ],
             $fixtures->getPostVars('foo', Pages::INDEX, 'foobar'));
     }
+
+    private function createObj(string $class)
+    {
+        $clazz = $this->getMockBuilder($class);
+        $clazz->disableOriginalConstructor();
+        return $clazz->getMock();
+    }
 }

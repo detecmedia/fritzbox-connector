@@ -3,7 +3,11 @@
 namespace Detecmedia\FritzboxConnector\Request;
 
 use Detecmedia\FritzboxConnector\Pages;
+use PHPUnit\Framework\MockObject\MockBuilder;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
+use ReflectionException;
 
 /**
  * Class RequestTest
@@ -71,5 +75,16 @@ class RequestTest extends TestCase
             'index.lua',
             $this->fixture->getUrl()
         );
+    }
+
+    /**
+     * @param string $name
+     * @return MockObject
+     */
+    private function createObj(string $name): MockObject
+    {
+        $clazz = $this->getMockBuilder($name);
+        $clazz->disableOriginalConstructor();
+        return $clazz->getMock();
     }
 }

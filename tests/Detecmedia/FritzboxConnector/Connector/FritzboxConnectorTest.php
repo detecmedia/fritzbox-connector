@@ -140,4 +140,11 @@ class FritzboxConnectorTest extends TestCase
             $getUiResp->invokeArgs($this->fixture, $args)
         );
     }
+
+    private function createObj(string $class)
+    {
+        $clazz = $this->getMockBuilder($class);
+        $clazz->disableOriginalConstructor();
+        return $clazz->getMock();
+    }
 }
