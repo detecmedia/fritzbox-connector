@@ -40,7 +40,7 @@ class PageHelper
     public function getVars($html): array
     {
         $matches = [];
-        $pattern = '/"(?<name>.*?)":"(?<value>.*?)"/';
+        $pattern = '/"(?<name>.*?)":.{0,1}"(?<value>.*?)"/';
         preg_match_all($pattern, $html, $matches);
 
         return $this->convert($matches);

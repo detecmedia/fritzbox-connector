@@ -139,7 +139,7 @@ class FritzboxConnector
     private function getChallenge(string $html): string
     {
         $matches = [];
-        $pattern = '/"challenge":"(?P<value>.*?)",/';
+        $pattern = '/"challenge":.{0,1}"(?P<value>.*?)",/';
         preg_match($pattern, $html, $matches);
 
         return $matches['value'];

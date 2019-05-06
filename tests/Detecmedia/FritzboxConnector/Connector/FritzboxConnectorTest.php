@@ -10,6 +10,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
+use ReflectionException;
 
 /**
  * Class FritzboxConnectorTest.
@@ -105,6 +106,9 @@ class FritzboxConnectorTest extends TestCase
         );
     }
 
+    /**
+     * @throws ReflectionException
+     */
     public function testGetChallenge()
     {
         $reflectionClass = new ReflectionClass($this->fixture);
@@ -112,20 +116,21 @@ class FritzboxConnectorTest extends TestCase
         $getChallenge->setAccessible(true);
 
         $html = $this->getStartnPage();
+        $result = $getChallenge->invokeArgs($this->fixture, [$html]);
         self::assertEquals(
             '108005d1',
-            $getChallenge->invokeArgs($this->fixture, [$html])
+            $result
         );
     }
 
     private function getLoginPage()
     {
-        return file_get_contents(__DIR__ . '/../Fixtures/logedin-page.html');
+        return file_get_contents(__DIR__ . '/../Fixtures/06.50/logedin-page.html');
     }
 
     private function getStartnPage()
     {
-        return file_get_contents(__DIR__ . '/../Fixtures/login-page.html');
+        return file_get_contents(__DIR__ . '/../Fixtures/06.50/login-page.html');
     }
 
     public function testGetUiResp()
