@@ -27,7 +27,7 @@ class PageHelperTest extends TestCase
     public function testGetPages()
     {
         $fixture = $this->fixture;
-        $html = $this->getHtmlFixture();
+        $html = $this->getHtmlFixture06_50();
         $pages = $fixture->getPages($html);
         self::assertTrue(array_key_exists('rootReboot', $pages));
         self::assertEquals(
@@ -42,7 +42,7 @@ class PageHelperTest extends TestCase
     public function testGetVars()
     {
         $fixture = $this->fixture;
-        $html = $this->getHtmlFixture();
+        $html = $this->getHtmlFixture06_50();
         $vars = $fixture->getVars($html);
         self::assertArrayHasKey('username', $vars);
         self::assertArrayHasKey('sid', $vars);
@@ -54,8 +54,8 @@ class PageHelperTest extends TestCase
      * Gets test html.
      * @return bool|string
      */
-    private function getHtmlFixture()
+    private function getHtmlFixture06_50()
     {
-        return file_get_contents(__DIR__ . '/../Fixtures/logedin-page.html');
+        return file_get_contents(__DIR__ . '/../Fixtures/06.50/logedin-page.html');
     }
 }

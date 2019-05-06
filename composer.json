@@ -10,7 +10,10 @@
   },
   "require": {
     "php": "^7.1",
-    "guzzlehttp/guzzle": "^6.3"
+    "guzzlehttp/guzzle": "^6.3",
+    "ext-dom": "*",
+    "ext-json": "*",
+    "ext-libxml": "*"
   },
   "authors": [
     {

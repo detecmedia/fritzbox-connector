@@ -50,8 +50,8 @@ class NetworkListHelper
     {
         $clients = [];
 
-        $jsonArray = json_decode($json,true);
-        foreach($jsonArray['data']['active'] as $client) {
+        $jsonArray = json_decode($json, true);
+        foreach ($jsonArray['data']['active'] as $client) {
             $clients[] = new ClientDetails($client);
         }
 
@@ -61,7 +61,8 @@ class NetworkListHelper
     private function getClientListFromHtml(string $content)
     {
         $clients = [];
-        $dom = new DOMDocument();
+        $dom = new DOMDocument('1.0', 'UTF-8');
+        $internalErrors = libxml_use_internal_errors(true);
         $dom->loadHTML($content);
         $trNotes = $dom->getElementsByTagName('tr');
 

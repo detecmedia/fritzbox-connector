@@ -5,6 +5,7 @@ namespace Detecmedia\FritzboxConnector\Helper;
 use Detecmedia\FritzboxConnector\Model\Client;
 use Detecmedia\FritzboxConnector\Model\ClientDetails;
 use PHPUnit\Framework\TestCase;
+use ReflectionException as ReflectionException;
 
 /**
  * Class NetworkListHelperTest
@@ -32,9 +33,18 @@ class NetworkListHelperTest extends TestCase
      * get html page
      * @return bool|string
      */
-    private function getHtml()
+    private function getHtml06_50()
     {
-        return file_get_contents(__DIR__ . '/../Fixtures/network-overview.html');
+        return file_get_contents(__DIR__ . '/../Fixtures/06.50/network-overview.html');
+    }
+
+    /**
+     * Gets mesh overview html
+     * @return false|string
+     */
+    private function getHtml07_02()
+    {
+        return file_get_contents(__DIR__ . '/../Fixtures/07.02/mesh-overview.html');
     }
 
     /**
@@ -43,7 +53,7 @@ class NetworkListHelperTest extends TestCase
      */
     private function getJson()
     {
-        return file_get_contents(__DIR__ . '/../Fixtures/network-details.json');
+        return file_get_contents(__DIR__ . '/../Fixtures//06.50/network-details.json');
     }
 
     /**
@@ -53,7 +63,7 @@ class NetworkListHelperTest extends TestCase
      */
     private function createMyObj($mock = [])
     {
-        return new NetworkListHelper($this->getHtml());
+        return new NetworkListHelper($this->getHtml06_50());
     }
 
     /**

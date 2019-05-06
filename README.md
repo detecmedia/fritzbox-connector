@@ -1,5 +1,7 @@
 # fritzbox-connector
-**Connect with Fritzbox FRITZ!OS:06.50**
+**Test with FRITZ!Box 6490 Cable (lgi)**
+
+**Connect with Fritzbox FRITZ!OS:07.02**
 
 ```php
 <?php
