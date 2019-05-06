@@ -18,6 +18,8 @@ class Tr064Connector
         'WANCommonInterfaceConfig:1' => 'wancommonifconfig1',
         'X_AVM-DE_OnTel:1' => 'x_contact',
         'DeviceConfig:1' => 'deviceconfig',
+        'DeviceInfo:1' => 'deviceinfo',
+        'X_AVM-DE_Homeauto:1' => 'x_homeauto'
     ];
 
     /**

@@ -19,6 +19,8 @@ class DeviceConfigTest extends TestCase
         $dev = new DeviceConfig($fritzboxUrl, $fritzboxUser, $fritzboxPassword);
         print_r($dev->GetPersistentData());
         print_r("\n");
+        //print_r($dev->ConfigurationFinished());
+        print_r("\n");
 
         $this->assertTrue(true);
     }
