@@ -1,6 +1,6 @@
 {
   "name": "detecmedia/fritzbox-connector",
-  "description": "A small Fritzbox (Cable) Web Connector for FRITZ!OS:06.50",
+  "description": "A small connector for FritzBox TR064 based",
   "type": "library",
   "autoload": {
     "psr-4": {
@@ -9,16 +9,13 @@
     }
   },
   "require": {
-    "php": "^7.1",
-    "guzzlehttp/guzzle": "^6.3",
-    "ext-dom": "*",
-    "ext-json": "*",
-    "ext-libxml": "*"
+    "php": "^7.2",
+    "ext-soap": "*"
   },
   "authors": [
     {
       "name": "Markus Potthast",
-      "email": "markus.potthast@detecmedia.de"
+      "email": "markus@potthast.ruhr"
     }
   ],
   "minimum-stability": "dev",
